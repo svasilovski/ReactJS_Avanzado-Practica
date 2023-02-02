@@ -37,6 +37,7 @@
         "indent": 0,
         "react/prop-types": 0,
         "arrow-body-style": 0,
-        "react/no-array-index-key": 0
+        "react/no-array-index-key": 0,
+        "react/function-component-definition": 0
     }
 }

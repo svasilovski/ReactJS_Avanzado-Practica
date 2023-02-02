@@ -16,7 +16,7 @@ module.exports = {
     output: {
         path: path.join(__dirname, '/dist'),
         filename: 'bundle.[hash].js',
-        publicPath: '/',
+        publicPath: './',
     },
     context: path.resolve(__dirname),
     devServer: {
@@ -80,7 +80,7 @@ module.exports = {
         ),
         new MiniCssExtractPlugin(
           {
-            filename: './css/styles.css',
+            filename: 'css/styles.css',
           },
         ),
         new SourceMapDevToolPlugin(

@@ -1,4 +1,6 @@
 import React from 'react';
+import Tasklist from './lists/TaskList';
+// import Settings from './settings/Settings';
 
 /**
  * Función Anónima para crear un Componente principal
@@ -7,7 +9,8 @@ import React from 'react';
 const App = () => {
     return (
       <div>
-        <h1>Hola Mundo!!!</h1>
+        <Tasklist />
+        {/* <Settings /> */}
       </div>
     );
 };
