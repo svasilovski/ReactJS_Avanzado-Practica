@@ -1,6 +1,7 @@
 import React from 'react';
 import Tasklist from './lists/TaskList';
 // import Settings from './settings/Settings';
+import CounterComponent from './counter/CounterComponent';
 
 /**
  * Función Anónima para crear un Componente principal
@@ -11,6 +12,7 @@ const App = () => {
       <div>
         <Tasklist />
         {/* <Settings /> */}
+        <CounterComponent />
       </div>
     );
 };
