@@ -15,6 +15,18 @@ const Tasklist = () => {
         setNewTask(event.target.value);
     };
 
+    const clearClick = () => { 
+      tasks.clear();
+    };
+
+    const sorthClick = () => {
+      tasks.sorth();
+    };
+
+    const reverseClick = () => {
+      tasks.reverse();
+    };
+
     return (
       <div>
         <h1>
@@ -27,18 +39,23 @@ const Tasklist = () => {
         { tasks.isEmpty()
             ? (<p>Task List is Empty</p>)
             : (
-              <ul>
-                {tasks.value.map((task, index) => (
-                  <li key={index}>
-                    <input
-                      type="checkbox"
-                      onClick={() => tasks.remove(index)}
-                      checked={false}
-                    />
-                    { task }
-                  </li>
-                        ))}
-              </ul>
+              <div>
+                <button type="button" onClick={clearClick}>Clear List</button>
+                <button type="button" onClick={sorthClick}>Sorth List</button>
+                <button type="button" onClick={reverseClick}>Reverse List</button>
+                <ul>
+                  {tasks.value.map((task, index) => (
+                    <li key={index}>
+                      <input
+                        type="checkbox"
+                        onClick={() => tasks.remove(index)}
+                        checked={false}
+                      />
+                      { task }
+                    </li>
+                          ))}
+                </ul>
+              </div>
             )}
 
       </div>

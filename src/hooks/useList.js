@@ -18,8 +18,23 @@ const useList = (initialValue = []) => {
 
     // TODO:Develop more functions for lists
 
+    const clear = () => {
+        // puede ser cualquiera de estas opciones:
+        // setValue([...value].length = 0);
+        // setValue(initialValue);
+        setValue([]);
+    };
+
+    const sorth = () => {
+        setValue([...value].sort());
+    };
+
+    const reverse = () => {
+        setValue([...value].reverse());
+    };
+
     return {
-            value, setValue, push, remove, isEmpty,
+            value, setValue, push, remove, isEmpty, clear, sorth, reverse,
         };
 };
 
